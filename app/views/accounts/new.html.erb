@@ -1,0 +1,11 @@
+<h2>Creat an account</h2>
+
+<%= form_for @account do |f| %>
+  <p>
+    <%= f.label :subdomain %>
+    <%= f.text_field :subdomain %>
+  </p>
+
+  <%= f.submit %>
+  
+<% end %>
