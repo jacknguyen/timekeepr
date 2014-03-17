@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Account do
   describe 'validation' do
+    it { should validate_presence_of :owner } #checking for user model association
     it { should validate_presence_of :subdomain }
     it { should validate_uniqueness_of :subdomain }
 
@@ -20,7 +21,7 @@ describe Account do
   end
 
   describe 'associations' do
-    it 'should have owner'
+    it { should belong_to :owner }
   end
 
 end
