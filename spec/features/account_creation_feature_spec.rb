@@ -8,7 +8,7 @@ describe 'account creation' do
     fill_in 'Name', with: 'Jack'
     fill_in 'Email', with: 'Jack@example.com'
     fill_in 'Password', with: 'pw'
-    fill_in 'Password Confirmation', with: 'pw'
+    fill_in 'Password confirmation', with: 'pw'
     fill_in 'Subdomain', with: 'test_domain' #allowing people to name their own subdomain so that we they enter it they can go to their own personally sign in page.
     click_button 'Create Account'
 
