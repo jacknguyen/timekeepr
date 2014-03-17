@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.0.2'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
@@ -16,6 +15,6 @@ group :development, :test do
   gem 'capybara' #integration testing with rails
   gem 'factory_girl_rails' #allows us to create factories for when we need an instance of an active record object
   gem 'database_cleaner' #cleans up our database after the test runs
-  gem 'shoulda-matchers' 
+  gem 'shoulda-matchers'
 
 end

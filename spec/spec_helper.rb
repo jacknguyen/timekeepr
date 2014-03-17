@@ -1,11 +1,12 @@
 ENV["RAILS_ENV"] ||= 'test'
+
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'database_cleaner'
 require 'capybara/rspec'
-
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 # Code below found on internet
@@ -20,6 +21,10 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-    # DatabaseCleaner.start
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
   end
 end
