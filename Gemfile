@@ -6,6 +6,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'anjlab-bootstrap-rails', '~>3.0.0.0', require: 'bootstrap-rails'
 
 group :development, :test do
   gem 'guard' #monitor files and when they're saved will perform an action for us
